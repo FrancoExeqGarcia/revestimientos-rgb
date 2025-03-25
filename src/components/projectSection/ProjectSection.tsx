@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProjectsModal from "./ProjectsModal";
 import "./ProjectsSection.css";
 

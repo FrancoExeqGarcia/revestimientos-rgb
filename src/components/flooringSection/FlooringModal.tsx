@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import "./FlooringSections.css";
 import { Laminate } from "./Laminate";
 import { LuxuryVinyl } from "./LuxuryVinyl";
@@ -18,7 +18,7 @@ const floorImages: Record<string, string> = {
 };
 
 export const FlooringModal: React.FC<FlooringModalProps> = ({ floor, onClose }) => {
-  const components: Record<string, JSX.Element> = {
+  const components: { [key: string]: React.ReactNode } = {
     tile: <Tile />,
     laminate: <Laminate />,
     luxuryVinyl: <LuxuryVinyl />,

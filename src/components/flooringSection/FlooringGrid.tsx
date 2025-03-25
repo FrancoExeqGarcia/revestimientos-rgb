@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { LanguageContext } from "../../context/LanguageContext";
+import React from "react";
 import "./FlooringSections.css";
 
 type FlooringGridProps = {
@@ -9,7 +8,6 @@ type FlooringGridProps = {
 };
 
 export const FlooringGrid: React.FC<FlooringGridProps> = ({ setSelectedFloor, setBgImage, setFadeOut }) => {
-  const { translations } = useContext(LanguageContext)!;
 
   const floors = [
     { key: "luxuryVinyl", label: "Luxury Vinyl", image: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742573849/luxury-vinyl_ix5qmp.jpg", bgImage: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742573852/vinyl_fpoqrp.jpg" },
