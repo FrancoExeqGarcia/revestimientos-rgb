@@ -1,0 +1,92 @@
+.opiniones-section {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    
+  }
+  
+  .opiniones-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: rgba(42, 120, 146, 0.7);
+}
+  
+  .opiniones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .opinion-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .opinion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .opinion-card p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .opinion-card .opinion-name {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .opinion-card .opinion-date {
+    font-size: 0.85rem;
+    color: #999;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M4.854 1.146a.5.5 0 0 1 0 .708L2.707 4l2.147 2.146a.5.5 0 0 1-.708.708l-2.5-2.5a.5.5 0 0 1 0-.708l2.5-2.5a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M3.146 1.146a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.708-.708L5.293 4 3.146 1.854a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Asegura que la flecha no quede fuera de la pantalla */
+  opacity: 1; /* Hace que siempre sean visibles */
+  z-index: 10; /* Asegura que estén sobre los demás elementos */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo más visible */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-control-prev {
+  left: -50px; /* Ajusta la posición si es necesario */
+}
+
+.carousel-control-next {
+  right: -50px; /* Ajusta la posición si es necesario */
+}
+

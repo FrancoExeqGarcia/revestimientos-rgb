@@ -1,0 +1,19 @@
+.fondo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.fondo-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/5; /* o ajustá según la relación que desees */
+}
+
+.fondo-img-1 {
+    background-image: url("https://res.cloudinary.com/drwacbtjf/image/upload/v1742570218/Jacksonville_s1e8xv.jpg");
+}

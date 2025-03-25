@@ -1,0 +1,19 @@
+.double-comparison-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .comparison-left,
+  .comparison-right {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+  
+  .comparison-wrapper {
+    width: 100%;
+  }
+  
