@@ -7,6 +7,7 @@ export interface LanguageContextType {
   language: Language;
   translations: Translations;
   setLanguage: (lang: Language) => void;
+  languageFlags: Record<Language, string>;  // ➡️ Agregá esta línea
 }
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

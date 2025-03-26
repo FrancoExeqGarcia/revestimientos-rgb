@@ -22,10 +22,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         setTranslations(ES);
     }
   }, [language]);
-
+  const languageFlags: Record<Language, string> = {
+    ES: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742957445/ES_bamghy.png",
+    EN: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742957444/EN_uzdyjl.png",
+    POR: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742957445/POR_bopyod.png",
+  };
   return (
-    <LanguageContext.Provider value={{ language, translations, setLanguage }}>
-      {children}
-    </LanguageContext.Provider>
+<LanguageContext.Provider value={{ language, translations, setLanguage, languageFlags }}>
+  {children}
+</LanguageContext.Provider>
   );
 };

@@ -7,8 +7,63 @@
     z-index: 1000;
     
   }
-  .topbar{
+  .topbar {
     background-color: #000000;
     color: #feffff;
+    width: 100%;
+    padding: 5px 10px;
   }
+  
+  .topbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+  }
+  
+  .topbar-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .topbar-container svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .topbar-container div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 768px) {
+    .topbar-container {
+      align-items: center;
+      padding: 5px 10px;
+    }
+  
+    .topbar-container > div {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    .topbar-container a {
+      font-size: 0.75rem;
+      gap: 4px;
+    }
+  
+    .topbar-container svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+  
   
