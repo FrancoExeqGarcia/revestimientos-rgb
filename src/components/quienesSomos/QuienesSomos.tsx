@@ -16,19 +16,14 @@ const QuienesSomos: React.FC = () => {
           />
         </div>
         <div className="text-container">
-
-          {translations.QuienesSomos.services && (
-            <>
-              <h2>SERVICIOS:</h2>
-              <ul>
-                {translations.QuienesSomos.services.map(
-                  (item: string, index: number) => (
-                    <li key={index}> {item}</li>
-                  )
-                )}
-              </ul>
-            </>
-          )}
+          <h2>{translations.QuienesSomos.services.title}</h2>
+          <ul>
+            {translations.QuienesSomos.services.description.map(
+              (item, index) => (
+                <li key={index}>{item}</li>
+              )
+            )}
+          </ul>
 
           <h2>{translations.QuienesSomos.specialty.title}</h2>
           <p>{translations.QuienesSomos.specialty.description}</p>

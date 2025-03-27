@@ -3,23 +3,28 @@ import { LanguageContext } from "./LanguageContext";
 import ES from "../components/languages/ES.json";
 import EN from "../components/languages/EN.json";
 import POR from "../components/languages/POR.json";
+import { Translations } from "../types/Translations";
 
 type Language = "ES" | "EN" | "POR";
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>("ES");
-  const [translations, setTranslations] = useState(ES);
+  const ES_Translations = ES as Translations;
+  const EN_Translations = EN as Translations;
+  const POR_Translations = POR as Translations;
 
+  const [language, setLanguage] = useState<Language>("ES");
+  const [translations, setTranslations] = useState<Translations>(ES_Translations);
+  
   useEffect(() => {
     switch (language) {
       case "EN":
-        setTranslations(EN);
+        setTranslations(EN_Translations);
         break;
       case "POR":
-        setTranslations(POR);
+        setTranslations(POR_Translations);
         break;
       default:
-        setTranslations(ES);
+        setTranslations(ES_Translations);
     }
   }, [language]);
   const languageFlags: Record<Language, string> = {

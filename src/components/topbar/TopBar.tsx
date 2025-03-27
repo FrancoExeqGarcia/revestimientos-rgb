@@ -1,7 +1,6 @@
 import React from "react";
 import "./TopBar.css";
 import { FaWhatsapp, FaMapMarkerAlt } from "react-icons/fa";
-
 const TopBar: React.FC = () => {
   return (
     <div className="topbar">

@@ -13,7 +13,7 @@ const menuItems = [
   { id: "quienes-somos", key: "QuienesSomos" },
   { id: "flooring", key: "floors" },
   { id: "projects-section", key: "improveSpace" },
-  { id: "comparison-section", key: "beforeAfter" },
+  { id: "reviews-section", key: "Reviews" },
   { id: "contact-container", key: "contact" },
 ];
 

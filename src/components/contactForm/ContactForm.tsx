@@ -75,8 +75,8 @@ const ContactForm: React.FC = () => {
           </a>
           <a href="https://wa.me/+5413416991069" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp className="icon whatsapp" size={30} />
-            <hr /><hr />
           </a>
+          <hr /><hr />
         </div>
         <div className="image-comparison-section">
         <ImageComparison comparisons={comparisons} />

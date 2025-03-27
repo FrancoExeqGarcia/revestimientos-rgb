@@ -1,0 +1,14 @@
+.fullpage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .first-section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  

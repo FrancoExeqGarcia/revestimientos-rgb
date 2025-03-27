@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer"
 import { LanguageProvider } from "./context/LanguageProvider"
 import OpinionesCarousel from "./components/opinionesSection/OpinionesCarousel"
 import ProjectSection from "./components/projectSection/ProjectSection"
+import "./fullpage.css"
 function App() {
   
   
@@ -23,9 +24,11 @@ function App() {
   return (
     <>
       <LanguageProvider>
+        <div className="fullpage">
         <TopBar/>
         <Navbar/>
         <FirstSection/>
+        </div>
         {/*<Fondo></Fondo>*/}
         <QuienesSomos/>
         <FlooringSections/>

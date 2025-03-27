@@ -5,7 +5,7 @@
     "QuienesSomos": "About Us",
     "floors": "Explore Our Floor Types",
     "improveSpace": "We Improve Your Space",
-    "beforeAfter": "Before and After",
+    "Reviews": "Reviews",
     "contact": "Contact"
   },
   "SLIDES": [
@@ -76,12 +76,15 @@
         "Guaranteed Satisfaction: Customer satisfaction is our priority. We make sure every job is completed as promised, with no exceptions."
       ]
     },
-    "services": [
-      "Installation",
-      "Remodeling",
-      "Demolition",
-      "Material sales"
-    ],
+    "services": {
+  "title": "SERVICIOS:",
+  "description": [
+    "Facility",
+    "remodeling",
+    "demolition",
+    "sale of materials"
+  ]
+},
     "floorTypes": [
       "Wood",
       "Laminate",

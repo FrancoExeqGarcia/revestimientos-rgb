@@ -1,82 +1,84 @@
 export interface Translations {
-    Menu: {
-      home: string;
-      instagram: string;
-      beforeAfter: string;
-      improveSpace: string;
-      QuienesSomos: string;
-      contact: string;
-      floors: string;
-    };
-    SLIDES: {
-      caption: string;
-    }[];
-    Instagram: {
-      title: string;
-      prev: string;
-      next: string;
-      page: string;
-      of: string;
-      alt: string[];
-    };
-    ImageComparison: {
-      title: string;
-      description: string;
-      before: string;
-      after: string;
-    };
-    VideoSection: {
-      title: string;
-      videoTitle: string;
-    };
-    QuienesSomos: {
-      title: string;
-      specialty: {
-        title: string;
-        description: string;
-      };
-      whyChooseUs: {
-        title: string;
-        items: string[];
-      };
-      commitment: {
-        title: string;
-        description: string[];
-      };
-      services: string[];      // <--- agregar esto
-  floorTypes: string[];   // <--- agregar esto
-  cabinets: string[];     // <--- agregar esto
-  materials: string[];    // <--- agregar esto
-    };
-    FlooringSections: {
-      title: string;
-      options: {
-        luxuryVinyl: string;
-        tile: string;
-        laminate: string;
-        wood: string;
-      };
-      descriptions: {
-        luxuryVinyl: { title: string; description: string }[];
-        tile: { title: string; description: string }[];
-        laminate: { title: string; description: string }[];
-        wood: { title: string; description: string }[];
-      };
-    };
-    ContactForm: {
+  Menu: {
+    home: string;
+    instagram: string;
+    Reviews: string;
+    improveSpace: string;
+    QuienesSomos: string;
+    contact: string;
+    floors: string;
+  };
+  SLIDES: {
+    caption: string;
+  }[];
+  Instagram: {
+    title: string;
+    prev: string;
+    next: string;
+    page: string;
+    of: string;
+    alt: string[];
+  };
+  ImageComparison: {
+    title: string;
+    description: string;
+    before: string;
+    after: string;
+  };
+  VideoSection: {
+    title: string;
+    videoTitle: string;
+  };
+  QuienesSomos: {
+    title: string;
+    specialty: {
       title: string;
       description: string;
-      name: string;
-      namePlaceholder: string;
-      surname: string;
-      surnamePlaceholder: string;
-      email: string;
-      emailPlaceholder: string;
-      message: string;
-      messagePlaceholder: string;
-      sendButton: string;
-      successMessage: string;
-      errorMessage: string;
     };
-  }
-  
+    whyChooseUs: {
+      title: string;
+      items: string[];
+    };
+    commitment: {
+      title: string;
+      description: string[];
+    };
+    services: {
+      title : string;
+      description: string[];
+    }     
+floorTypes: string[];   
+cabinets: string[];     
+materials: string[];   
+  };
+  FlooringSections: {
+    title: string;
+    options: {
+      luxuryVinyl: string;
+      tile: string;
+      laminate: string;
+      wood: string;
+    };
+    descriptions: {
+      luxuryVinyl: { title: string; description: string }[];
+      tile: { title: string; description: string }[];
+      laminate: { title: string; description: string }[];
+      wood: { title: string; description: string }[];
+    };
+  };
+  ContactForm: {
+    title: string;
+    description: string;
+    name: string;
+    namePlaceholder: string;
+    surname: string;
+    surnamePlaceholder: string;
+    email: string;
+    emailPlaceholder: string;
+    message: string;
+    messagePlaceholder: string;
+    sendButton: string;
+    successMessage: string;
+    errorMessage: string;
+  };
+}
