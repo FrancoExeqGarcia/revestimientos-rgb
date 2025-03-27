@@ -89,7 +89,7 @@ const ContactForm: React.FC = () => {
           <select id="contactType" value={formData.contactType} onChange={handleChange} required>
             <option value="budget">Solicitar cotización</option>
             <option value="opinion">Opinión sobre la atención</option>
-            <option value="opinion">Otro</option>
+            <option value="other">Otro</option>
           </select>
 
           <label htmlFor="name">{translations.ContactForm.name}</label>
