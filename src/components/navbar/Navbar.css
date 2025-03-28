@@ -1,262 +1,271 @@
 /* 🌐 Estilos generales */
 .navbar {
-    width: 100%;
-    background-color: #ffffff;
-    color: #000000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 0px solid #ffffff;
-    overflow: visible !important;
-  }
-  p{
-    text-align: center;
-  }
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  /* 📌 Logo */
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 0px solid #ffffff;
+  overflow: visible !important;
+}
+p {
+  text-align: center;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 📌 Logo */
+.navbar-logo img {
+  height: 120px;
+}
+
+@media (min-width: 1300px) {
   .navbar-logo img {
-    height: 120px;
+    height: 140px;
   }
-  
-  @media (min-width: 1300px) {
-    .navbar-logo img {
-      height: 140px;
-    }
-  }
-  
-  /* 📌 Menú de navegación */
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 5rem;
+}
+
+/* 📌 Menú de navegación */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #090909;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: #8bbaca;
+}
+
+/* 📌 Botón Menú Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100;
+  position: absolute;
+  right: 15%;
+  top: 35%;
+}
+
+.menu-toggle span {
+  background-color: rgb(0, 0, 0);
+  height: 3px;
+  width: 30px;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.active span {
+  background-color: rgb(0, 0, 0);
+}
+
+/* 📌 Menú en modo responsive */
+@media (max-width: 1300px) {
+  .navbar-container {
+    position: relative;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-menu li a {
-    text-decoration: none;
-    color: #090909;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
-  
-  .navbar-menu li a:hover {
-    color: #8bbaca;
-  }
-  
-  /* 📌 Botón Menú Hamburguesa */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1100;
-    position: absolute;
-    right: 15%;
-    top: 35%;
-  }
-  
-  .menu-toggle span {
-    background-color: rgb(0, 0, 0);
-    height: 3px;
-    width: 30px;
-    margin: 5px 0;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .menu-toggle.active span {
-    background-color: rgb(0, 0, 0);
-  }
-  
-  /* 📌 Menú en modo responsive */
-  @media (max-width: 1300px) {
-    .navbar-container {
-        position: relative;
-      flex-direction: row;
-      align-items: center;
-      position: relative;
-    }
-  
-    .navbar-menu {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background-color: #ffffff;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-      padding: 0 1rem;
-      opacity: 0;
-      transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-      margin-top: 55px;
-    }
-  
-    .navbar-menu.active {
-        max-height: 500px;
-        opacity: 1;
-        background-image: 
-          linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.9)), 
-          url('/img/logo_optimized.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-color: rgba(255, 255, 255, 0.95);
-      }
-      
-      
-  
-    .navbar-menu li {
-      padding: 1px 0;
-      text-align: center;
-      border-bottom: 1px solid #000000;
-    }
-  
-    .navbar-menu li:last-child {
-      border-bottom: none;
-    }
-  
-    .menu-toggle {
-      display: flex;
-    }
-  }
-  
-  .menu-toggle.active + .navbar-menu {
-    border-bottom: 1px solid #e0e0e0;
-  }
-  
-  /* 🌍 Selector de idioma */
-  .language-menu {
     position: relative;
   }
-  
-  .language-dropdown {
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #ffffff;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e0e0e0;
-    list-style: none;
-    padding: 10px;
-    display: none;
-    z-index: 1101;
-    min-width: 120px;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    margin-top: 55px;
   }
-  
-  .language-menu:hover .language-dropdown,
-  .language-button:focus + .language-dropdown {
+
+  .navbar-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url("/img/logo_optimized.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .navbar-menu li {
+    padding: 1px 0;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+  }
+
+  .navbar-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.menu-toggle.active + .navbar-menu {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 🌍 Selector de idioma */
+.language-menu {
+  position: relative;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  list-style: none;
+  padding: 10px;
+  display: none;
+  z-index: 1101;
+  min-width: 120px;
+}
+
+.language-menu:hover .language-dropdown,
+.language-button:focus + .language-dropdown {
+  display: block;
+}
+
+/* 📌 Ajustes responsivos para el selector de idioma */
+@media (max-width: 1300px) {
+  .language-menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  .language-button {
+    width: 100%;
     display: block;
   }
-  
-  /* 📌 Ajustes responsivos para el selector de idioma */
-  @media (max-width: 1300px) {
-    .language-menu {
-      width: 100%;
-      text-align: center;
-    }
-  
-    .language-button {
-      width: 100%;
-      display: block;
-    }
-  
-    .language-dropdown {
-      position: relative;
-      top: 0;
-      width: 100%;
-      box-shadow: none;
-      display: none;
-    }
-  
-    .language-menu.active .language-dropdown {
-      display: block;
-    }
+
+  .language-dropdown {
+    position: relative;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    display: none;
   }
-  
-  /* 🔹 Ajustes para resoluciones entre 1301px y 1350px */
-  @media (min-width: 1301px) and (max-width: 1350px) {
-    .navbar-container {
-        position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 0 20px;
-    }
-  
-  
-    .language-menu {
-      position: static;
-      margin-left: auto;
-    }
-  
-    .language-selector {
-      width: auto;
-      min-width: 140px;
-      max-width: 200px;
-    }
-    nav ul li {
-      background-color: rgba(0, 0, 0, 0.4); /* negro con 40% de opacidad */
-      padding: 8px 12px;
-      margin: 5px 0;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-  
-    nav ul li a {
-      color: white !important; /* para asegurar contraste con fondo oscuro */
-    }
-  
-    nav ul li:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
+
+  .language-menu.active .language-dropdown {
+    display: block;
   }
-  @media (max-width: 768px) {
-    .language-menu {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  
-    .language-selector-wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  
-    .language-selector {
-      width: 90%;
-      max-width: 200px;
-    }
+}
+
+/* 🔹 Ajustes para resoluciones entre 1301px y 1350px */
+@media (min-width: 1301px) and (max-width: 1350px) {
+  .navbar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
   }
-  
-  @media (max-width: 1300px) {
-    .navbar-menu li {
-      background-color: rgba(139, 186, 202, 0.3);
-      padding: 8px 12px;
-      margin: 5px 20px;
-      border-radius: 1px;
-      transition: background-color 0.3s ease;
-    }
-  
-    .navbar-menu li a {
-      color: rgb(0, 0, 0) !important;
-    }
-  
-    .navbar-menu li:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
+
+  .language-menu {
+    position: static;
+    margin-left: auto;
   }
+
+  .language-selector {
+    width: auto;
+    min-width: 140px;
+    max-width: 200px;
+  }
+  nav ul li {
+    background-color: rgba(0, 0, 0, 0.4); /* negro con 40% de opacidad */
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a {
+    color: white !important; /* para asegurar contraste con fondo oscuro */
+  }
+
+  nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@media (max-width: 768px) {
+  .language-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .language-selector-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .language-selector {
+    width: 90%;
+    max-width: 200px;
+  }
+
+
+}
+
+@media (max-width: 1300px) {
+  .navbar-menu li {
+    background-color: rgba(139, 186, 202, 0.3);
+    padding: 8px 12px;
+    margin: 5px 20px;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-menu li a {
+    color: rgb(0, 0, 0) !important;
+  }
+
+  .navbar-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .navbar-menu li.language-menu {
+    max-width: 200px;
+    margin: 5px auto;
+    padding: 6px 10px;
+    background-color: rgba(139, 186, 202, 0.3);
+    border-radius: 5px;
+    text-align: center;
+  }
+}

@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
         {/* Menú */}
         <NavbarMenu menuOpen={menuOpen} translations={translations} />
       </div>
-      <p className="info">Corporación de construcción</p>
+      <p className="info">EMPRESA DE CONSTRUCCIÓN</p>
     </nav>
   );
 };
