@@ -28,18 +28,15 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo */}
         <div className="navbar-logo">
           <img src={logo} alt="Logo RGB" />
         </div>
-
-        {/* Botón Menú Hamburguesa */}
         <MenuToggle menuOpen={menuOpen} toggleMenu={toggleMenu} />
-
-        {/* Menú */}
         <NavbarMenu menuOpen={menuOpen} translations={translations} />
       </div>
-      <p className="info">EMPRESA DE CONSTRUCCIÓN</p>
+      <div className="navbar-subtitle">
+        <p>EMPRESA DE CONSTRUCCIÓN</p>
+      </div>
     </nav>
   );
 };
