@@ -61,4 +61,30 @@
     border-radius: 10px;
     object-fit: contain;
   }
+  .modal-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.3s ease;
+  }
+  
+  .modal-nav-button:hover {
+    background: rgba(255, 255, 255, 0.85);
+  }
+  
+  .modal-prev {
+    left: 10px;
+  }
+  
+  .modal-next {
+    right: 10px;
+  }
   
