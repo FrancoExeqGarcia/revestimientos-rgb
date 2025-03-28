@@ -28,9 +28,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   }, [language]);
   const languageFlags: Record<Language, string> = {
-    ES: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742957445/ES_bamghy.png",
-    EN: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742957444/EN_uzdyjl.png",
-    POR: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742957445/POR_bopyod.png",
+    ES: "https://res.cloudinary.com/drwacbtjf/image/upload/v1743188884/spain_n6iqbo.png",
+    EN: "https://res.cloudinary.com/drwacbtjf/image/upload/v1743189034/eeuu_hbbmnt.png",
+    POR: "https://res.cloudinary.com/drwacbtjf/image/upload/v1743187487/11zon_cropped_ykitcx.png",
   };
   return (
 <LanguageContext.Provider value={{ language, translations, setLanguage, languageFlags }}>
