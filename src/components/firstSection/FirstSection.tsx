@@ -6,7 +6,7 @@ const slides = [
   { src: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742920360/firstsection4_eb9qfy.jpg", alt: "CUMARU" },
   { src: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742920359/firstsection2_vvtaae.jpg", alt: "CUMARU" },
   { src: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742920359/firstsection3_e4au5x.jpg", alt: "TAUARI SOUTH BEACH" },
-  { src: "https://res.cloudinary.com/drwacbtjf/image/upload/v1742861322/Imagen_de_WhatsApp_2025-02-06_a_las_18.38.35_2b29cb25_mbguw7.jpg", alt: "CUMARU 2" },
+  { src: "https://res.cloudinary.com/drwacbtjf/image/upload/v1743186986/Imagen_de_WhatsApp_2025-03-28_a_las_15.34.27_0a193ddb_tpcere.jpg", alt: "CUMARU 2" },
 
 ];
 
