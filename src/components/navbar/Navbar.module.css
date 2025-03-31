@@ -1,4 +1,3 @@
-/* 🌐 Estilos generales */
 .navbar {
   width: 100%;
   background-color: #ffffff;
@@ -10,10 +9,8 @@
   border-bottom: 0px solid #ffffff;
   overflow: visible !important;
 }
-p {
-  text-align: center;
-}
-.navbar-container {
+
+.navbarContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,19 +19,17 @@ p {
   padding: 0 15px;
 }
 
-/* 📌 Logo */
-.navbar-logo img {
+.navbarLogo img {
   height: 100px;
 }
 
 @media (min-width: 1300px) {
-  .navbar-logo img {
+  .navbarLogo img {
     height: 100px;
   }
 }
 
-/* 📌 Menú de navegación */
-.navbar-menu {
+.navbarMenu {
   list-style: none;
   display: flex;
   gap: 5rem;
@@ -44,19 +39,18 @@ p {
   padding: 0;
 }
 
-.navbar-menu li a {
+.navbarMenu li a {
   text-decoration: none;
   color: #090909;
   font-size: 1rem;
   transition: color 0.3s;
 }
 
-.navbar-menu li a:hover {
+.navbarMenu li a:hover {
   color: #8bbaca;
 }
 
-/* 📌 Botón Menú Hamburguesa */
-.menu-toggle {
+.menuToggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
@@ -66,7 +60,7 @@ p {
   top: 20%;
 }
 
-.menu-toggle span {
+.menuToggle span {
   background-color: rgb(0, 0, 0);
   height: 3px;
   width: 30px;
@@ -74,10 +68,11 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
-.menu-toggle.active span {
+.menuToggle.active span {
   background-color: rgb(0, 0, 0);
 }
-.navbar-subtitle {
+
+.navbarSubtitle {
   text-align: center;
   font-size: 0.95rem;
   font-weight: 500;
@@ -85,18 +80,19 @@ p {
   margin-top: 5px;
   margin-bottom: 8px;
 }
-/* 📌 Menú en modo responsive */
+
 @media (max-width: 1300px) {
-  .navbar-container {
+  .navbarContainer {
     position: relative;
     flex-direction: row;
     align-items: center;
-    position: relative;
   }
-  .navbar-logo img {
+
+  .navbarLogo img {
     height: 100px;
   }
-  .navbar-menu {
+
+  .navbarMenu {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -113,7 +109,7 @@ p {
     margin-top: 55px;
   }
 
-  .navbar-menu.active {
+  .navbarMenu.active {
     max-height: 500px;
     opacity: 1;
     background-image: linear-gradient(
@@ -127,31 +123,30 @@ p {
     background-color: rgba(255, 255, 255, 0.95);
   }
 
-  .navbar-menu li {
+  .navbarMenu li {
     padding: 1px 0;
     text-align: center;
     border-bottom: 1px solid #000000;
   }
 
-  .navbar-menu li:last-child {
+  .navbarMenu li:last-child {
     border-bottom: none;
   }
 
-  .menu-toggle {
+  .menuToggle {
     display: flex;
   }
 }
 
-.menu-toggle.active + .navbar-menu {
+.menuToggle.active + .navbarMenu {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* 🌍 Selector de idioma */
-.language-menu {
+.languageMenu {
   position: relative;
 }
 
-.language-dropdown {
+.languageDropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -165,24 +160,23 @@ p {
   min-width: 120px;
 }
 
-.language-menu:hover .language-dropdown,
-.language-button:focus + .language-dropdown {
+.languageMenu:hover .languageDropdown,
+.languageButton:focus + .languageDropdown {
   display: block;
 }
 
-/* 📌 Ajustes responsivos para el selector de idioma */
 @media (max-width: 1300px) {
-  .language-menu {
+  .languageMenu {
     width: 100%;
     text-align: center;
   }
 
-  .language-button {
+  .languageButton {
     width: 100%;
     display: block;
   }
 
-  .language-dropdown {
+  .languageDropdown {
     position: relative;
     top: 0;
     width: 100%;
@@ -190,14 +184,13 @@ p {
     display: none;
   }
 
-  .language-menu.active .language-dropdown {
+  .languageMenu.active .languageDropdown {
     display: block;
   }
 }
 
-/* 🔹 Ajustes para resoluciones entre 1301px y 1350px */
 @media (min-width: 1301px) and (max-width: 1350px) {
-  .navbar-container {
+  .navbarContainer {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -206,18 +199,19 @@ p {
     padding: 0 20px;
   }
 
-  .language-menu {
+  .languageMenu {
     position: static;
     margin-left: auto;
   }
 
-  .language-selector {
+  .languageSelector {
     width: auto;
     min-width: 140px;
     max-width: 200px;
   }
+
   nav ul li {
-    background-color: rgba(0, 0, 0, 0.4); /* negro con 40% de opacidad */
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 8px 12px;
     margin: 5px 0;
     border-radius: 5px;
@@ -225,35 +219,38 @@ p {
   }
 
   nav ul li a {
-    color: white !important; /* para asegurar contraste con fondo oscuro */
+    color: white !important;
   }
 
   nav ul li:hover {
     background-color: rgba(0, 0, 0, 0.6);
   }
 }
+
 @media (max-width: 768px) {
-  .language-menu {
+  .languageMenu {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .language-selector-wrapper {
+  .languageSelectorWrapper {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .language-selector {
+  .languageSelector {
     width: 90%;
     max-width: 200px;
   }
-  .navbar-logo img {
+
+  .navbarLogo img {
     height: 80px;
     padding-bottom: 5px;
   }
-  .topbar.centered {
+
+  .topbarCentered {
     gap: 30px;
     padding: 10px 15px;
     flex-direction: row;
@@ -264,7 +261,7 @@ p {
 }
 
 @media (max-width: 1300px) {
-  .navbar-menu li {
+  .navbarMenu li {
     background-color: rgba(139, 186, 202, 0.3);
     padding: 8px 12px;
     margin: 5px 20px;
@@ -272,14 +269,15 @@ p {
     transition: background-color 0.3s ease;
   }
 
-  .navbar-menu li a {
+  .navbarMenu li a {
     color: rgb(0, 0, 0) !important;
   }
 
-  .navbar-menu li:hover {
+  .navbarMenu li:hover {
     background-color: rgba(0, 0, 0, 0.6);
   }
-  .navbar-menu li.language-menu {
+
+  .navbarMenu li.languageMenu {
     max-width: 200px;
     margin: 5px auto;
     padding: 6px 10px;
@@ -287,4 +285,7 @@ p {
     border-radius: 5px;
     text-align: center;
   }
+}
+.menuToggleActive span {
+  background-color: rgb(0, 0, 0);
 }

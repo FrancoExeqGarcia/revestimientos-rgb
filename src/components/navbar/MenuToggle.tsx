@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 interface MenuToggleProps {
   menuOpen: boolean;
@@ -9,15 +9,15 @@ interface MenuToggleProps {
 const MenuToggle: React.FC<MenuToggleProps> = ({ menuOpen, toggleMenu }) => {
   return (
     <div
-      className={`menu-toggle ${menuOpen ? "active" : ""}`}
+      className={styles.menuToggle}
       onClick={(e) => {
         e.stopPropagation();
         toggleMenu();
       }}
     >
-      <span></span>
-      <span></span>
-      <span></span>
+      <span className={menuOpen ? styles.menuToggleActive : ""}></span>
+      <span className={menuOpen ? styles.menuToggleActive : ""}></span>
+      <span className={menuOpen ? styles.menuToggleActive : ""}></span>
     </div>
   );
 };

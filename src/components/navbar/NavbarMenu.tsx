@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import LanguageSelector from "../languageSelector/LanguageSelector";
 import { Translations } from "../../types/Translations";
+import styles from "./Navbar.module.css"; // ✅ Import del módulo
 
 interface NavbarMenuProps {
   menuOpen: boolean;
@@ -20,7 +21,7 @@ const menuItems = [
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ menuOpen, translations }) => {
   return (
     <ul
-      className={`navbar-menu ${menuOpen ? "active" : ""}`}
+      className={`${styles.navbarMenu} ${menuOpen ? styles.active : ""}`}
       style={{ top: menuOpen ? "70px" : "60px" }}
     >
       {menuItems.map((item) => (
@@ -37,7 +38,7 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ menuOpen, translations }) => {
           </Link>
         </li>
       ))}
-      <li className="language-menu">
+      <li className={styles.languageMenu}>
         <LanguageSelector />
       </li>
     </ul>

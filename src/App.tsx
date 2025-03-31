@@ -1,13 +1,15 @@
-import ContactForm from "./components/contactForm/ContactForm"
-import FirstSection from "./components/firstSection/FirstSection"
-import { FlooringSections } from "./components/flooringSection/FlooringSections"
-import Navbar from "./components/navbar/Navbar"
-import QuienesSomos from "./components/quienesSomos/QuienesSomos"
-import TopBar from "./components/topbar/TopBar"
-import Footer from "./components/footer/Footer"
+import {
+  ContactForm,
+  FirstSection,
+  FlooringSections,
+  Navbar,
+  QuienesSomos,
+  Footer,
+  OpinionesCarousel,
+  ProjectSection
+} from "./components"
+
 import { LanguageProvider } from "./context/LanguageProvider"
-import OpinionesCarousel from "./components/opinionesSection/OpinionesCarousel"
-import ProjectSection from "./components/projectSection/ProjectSection"
 import "./fullpage.css"
 function App() {
   
@@ -25,7 +27,6 @@ function App() {
     <>
       <LanguageProvider>
         <div className="fullpage">
-        <TopBar/>
         <Navbar/>
         <FirstSection/>
         </div>

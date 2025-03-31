@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 import logo from "../../../public/img/logo_optimized.png";
 import { LanguageContext } from "../../context/LanguageContext";
 import NavbarMenu from "./NavbarMenu";
 import MenuToggle from "./MenuToggle";
+import { TopBar } from "../topbar";
 
 const Navbar: React.FC = () => {
   const { translations } = useContext(LanguageContext)!;
@@ -26,16 +27,17 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <div className="navbar-logo">
+    <nav className={styles.navbar}>
+      <TopBar />
+      <div className={styles.navbarContainer}>
+        <div className={styles.navbarLogo}>
           <img src={logo} alt="Logo RGB" />
         </div>
         <MenuToggle menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <NavbarMenu menuOpen={menuOpen} translations={translations} />
       </div>
-      <div className="navbar-subtitle">
-        <p>EMPRESA DE CONSTRUCCIÓN</p>
+      <div className={styles.navbarSubtitle}>
+        <p>CORPORACIÓN DE CONSTRUCCIÓN</p>
       </div>
     </nav>
   );
