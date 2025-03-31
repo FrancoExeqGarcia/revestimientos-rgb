@@ -1,4 +1,4 @@
-#quienes-somos {
+.section {
   padding: 60px 20px;
   background: linear-gradient(135deg, #f5f7fa, #ffffff);
 }
@@ -8,38 +8,38 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  /*max-width: 1000px; */
   margin: auto;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
+
 @media (min-width: 800px) {
   .container {
     max-width: 1300px;
   }
 }
-.image-container {
+
+.imageContainer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img-responsive {
+.imgResponsive {
   width: 140px;
   border-radius: 200px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.text-container {
+.textContainer {
   width: 100%;
-  max-width: 1300px; 
+  max-width: 1300px;
   margin: 0 auto;
   text-align: center;
 }
 
-
-.text-container h2 {
-  font-size: 2.2rem; 
+.textContainer h2 {
+  font-size: 2.2rem;
   margin-bottom: 20px;
   color: rgba(42, 120, 146, 0.7);
   border-bottom: 2px solid #007a99;
@@ -47,7 +47,7 @@
   padding-bottom: 5px;
 }
 
-.text-container h3 {
+.textContainer h3 {
   margin-top: 30px;
   font-size: 1.8rem;
   color: rgba(42, 120, 146, 0.7);
@@ -55,14 +55,14 @@
   padding-left: 10px;
 }
 
-.text-container p {
+.textContainer p {
   font-size: 1.15rem;
   line-height: 1.7;
   margin-bottom: 30px;
   color: #555;
 }
 
-.list-columns {
+.listColumns {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -70,14 +70,14 @@
   justify-content: center;
 }
 
-.list-columns ul {
+.listColumns ul {
   flex: 1;
   list-style: none;
   padding-left: 0;
   max-width: 580px;
 }
 
-.list-columns li {
+.listColumns li {
   margin-bottom: 12px;
   font-size: 1rem;
   color: #444;
@@ -85,7 +85,7 @@
   padding-left: 28px;
 }
 
-.list-columns li::before {
+.listColumns li::before {
   content: "✔";
   position: absolute;
   left: 0;
@@ -93,48 +93,50 @@
   font-weight: bold;
 }
 
-ul {
+.textContainer ul {
   margin-top: 15px;
-  padding-left: 0; 
+  padding-left: 0;
 }
 
-ul li {
+.textContainer ul li {
   margin-bottom: 10px;
   font-size: 1rem;
   color: #444;
-  list-style-position: inside; /* bullets más alineados */
+  list-style-position: inside;
 }
-ul li::before {
+
+.textContainer ul li::before {
   margin-right: 10px;
   color: #28a745;
   font-weight: bold;
 }
 
 @media (max-width: 768px) {
-  .text-container h2 {
+  .textContainer h2 {
     text-align: center;
   }
 
-  .list-columns {
+  .listColumns {
     flex-direction: column;
     align-items: center;
   }
 
-  .img-responsive {
-    width: 100px; 
+  .imgResponsive {
+    width: 100px;
   }
 }
+
 @media (min-width: 1000px) {
-  .text-container {
+  .textContainer {
     text-align: left;
     padding: 0 40px;
   }
 
-  .list-columns {
+  .listColumns {
     justify-content: flex-start;
   }
 
-  .text-container h2 {
+  .textContainer h2 {
     text-align: left;
   }
 }

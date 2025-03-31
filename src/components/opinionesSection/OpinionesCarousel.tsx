@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './OpinionesCarousel.css';
+import React, { useEffect, useState } from "react";
+import styles from "./OpinionesCarousel.module.css";
+import { Opinion } from "./types";
+import { OpinionCard } from "./OpinionCard";
 
-export interface Opinion {
-  id: number;
-  name: string;
-  comment: string;
-  date: string;
-  approved: boolean;
-}
-
-interface OpinionesCarouselProps {
+interface Props {
   opinionsData: Opinion[];
   itemsPerSlide?: number;
   autoSlideInterval?: number;
@@ -20,17 +14,17 @@ const chunkArray = (array: Opinion[], size: number): Opinion[][] =>
   array.reduce<Opinion[][]>((acc, _, index) =>
     index % size === 0 ? [...acc, array.slice(index, index + size)] : acc, []);
 
-const OpinionesCarousel: React.FC<OpinionesCarouselProps> = ({
+const OpinionesCarousel: React.FC<Props> = ({
   opinionsData,
   itemsPerSlide = 3,
   autoSlideInterval = 5000,
-  title = '¡Clientes felices!'
+  title = "¡Clientes felices!"
 }) => {
   const [approvedOpinions, setApprovedOpinions] = useState<Opinion[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    setApprovedOpinions(opinionsData.filter(op => op.approved));
+    setApprovedOpinions(opinionsData.filter((op) => op.approved));
   }, [opinionsData]);
 
   const opinionGroups = chunkArray(approvedOpinions, itemsPerSlide);
@@ -42,35 +36,21 @@ const OpinionesCarousel: React.FC<OpinionesCarouselProps> = ({
     return () => clearInterval(interval);
   }, [opinionGroups.length, autoSlideInterval]);
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + opinionGroups.length) % opinionGroups.length);
-  };
-
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % opinionGroups.length);
-  };
+  const handlePrev = () => setCurrentSlide((prev) => (prev - 1 + opinionGroups.length) % opinionGroups.length);
+  const handleNext = () => setCurrentSlide((prev) => (prev + 1) % opinionGroups.length);
 
   return (
-    <section className="opiniones-section">
+    <section className={styles.opinionesSection}>
       <h2>{title}</h2>
       {opinionGroups.length > 0 ? (
-        <div className="carousel-container">
-          <div className="opiniones-grid">
-            {opinionGroups[currentSlide].map(op => (
-              <div
-                key={op.id}
-                className="opinion-card"
-                onClick={handleNext}
-                style={{ cursor: 'pointer' }}
-              >
-                <p>"{op.comment}"</p>
-                <div className="opinion-name">{op.name}</div>
-                <div className="opinion-date">{op.date}</div>
-              </div>
+        <div className={styles.carouselContainer}>
+          <div className={styles.opinionesGrid}>
+            {opinionGroups[currentSlide].map((op) => (
+              <OpinionCard key={op.id} opinion={op} onClick={handleNext} />
             ))}
           </div>
-          <button className="carousel-control-prev" onClick={handlePrev}>❮</button>
-          <button className="carousel-control-next" onClick={handleNext}>❯</button>
+          <button className={styles.carouselControlPrev} onClick={handlePrev}>❮</button>
+          <button className={styles.carouselControlNext} onClick={handleNext}>❯</button>
         </div>
       ) : (
         <p className="text-center">Aún no hay comentarios.</p>

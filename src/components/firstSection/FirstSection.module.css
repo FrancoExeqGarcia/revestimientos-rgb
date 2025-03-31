@@ -1,11 +1,4 @@
-#sp-page-title {
-  margin-top: 0px; /* o padding-top: 120px */
-  width: 100%;
-  background-color: #f0eded;
-  position: relative;
-}
-
-.first-section {
+.firstSection {
   flex-grow: 1;
   height: 100%;
   display: flex;
@@ -28,23 +21,17 @@
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: scale(1.02);
   z-index: 0;
-  pointer-events: none; /* 👈 evita que bloquee los clics */
+  pointer-events: none;
 }
 
-.slide.active {
+.active {
   opacity: 1;
   z-index: 1;
 }
-.caption {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
 
-.slide.active .caption {
-  opacity: 1;
-}
 .slide img {
   width: 100%;
   height: 100%;
@@ -60,6 +47,17 @@
   padding: 8px 16px;
   border-radius: 4px;
   font-size: 1rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide.active .caption {
+  opacity: 0;
 }
 
 .dots {
@@ -68,7 +66,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  z-index: 10; /* 👈 muy importante */
+  z-index: 10;
 }
 
 .dot {

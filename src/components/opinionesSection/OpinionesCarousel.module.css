@@ -1,0 +1,75 @@
+.opinionesSection {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.opinionesSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: rgba(42, 120, 146, 0.7);
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+.opinionesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card individual */
+.opinionCard {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.opinionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.opinionName {
+  font-weight: bold;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.opinionDate {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Botones de navegación */
+.carouselControlPrev,
+.carouselControlNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carouselControlPrev {
+  left: -25px;
+}
+
+.carouselControlNext {
+  right: -25px;
+}
+.carouselWrapper {
+  overflow: hidden;
+  width: 100%;
+}
